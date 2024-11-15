@@ -243,6 +243,7 @@ nav a {
     transition: color 0.3s ease;
     padding: 5px 0;
     position: relative;
+    margin-left: 20px;
 }
 
 nav a:hover {
