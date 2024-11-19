@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="stylesheets/main.css">
     <script src="https://kit.fontawesome.com/64abc71c23.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
 
 
@@ -16,7 +18,7 @@
     <header class="header">
         <!-- Top Header Bar -->
         <div class="top-bar">
-            <div class="container">
+            <div class="header-container">
                 <div class="top-content">
                     <div class="left-content">
                         <img src="images/digital-dockets-logo.png" alt="Government Logo" class="gov-logo">
@@ -42,19 +44,25 @@
 
         <!-- Navigation Bar -->
         <div class="nav-bar">
-            <div class="container">
+            <div class="header-container">
                 <div class="nav-content">
                     <div class="logo-container">
                         <img src="images/logo.png" alt="Logo" class="logo">
                     </div>
-                    <nav>
-                        <a href="#" class="active">Home</a>
-                        <a href="#">About Us</a>
-                        <a href="#">Services</a>
-                        <a href="#">Dashboard</a>
-                        <a href="#">Schemes</a>
+                    <div class="menu-icon" id="menuIcon">
+                        <i class="fas fa-bars"></i> <!-- Font Awesome icon for menu -->
+                    </div>
+                    <nav class="navbar">
+                        <div class="nav-links" id="navLinks elements" >
+                            <a href="#" class="nav-item">Home</a>
+                            <a href="about.html" class="nav-item">About Us</a>
+                            <a href="#" class="nav-item">Services</a>
+                            <a href="#" class="nav-item">Dashboard</a>
+                            <a href="#" class="nav-item">Schemes</a>
+                            <a class="login-btn" href="login.html">Login / Register</a>
+                            <i id="bar" class="menu-icon fa-solid fa-bars " ></i>
+                        </div>
                     </nav>
-                    <a class="login-btn" href="login.html" >Login / Register</a>
                 </div>
             </div>
         </div>
@@ -65,21 +73,24 @@
     <section class="slider-container">
         <div class="slider">
             <div class="slide active">
-                <img src="https://images.unsplash.com/photo-1565019011521-b0575cbb57c8?w=1600&h=800" alt="Government Initiative 1">
+                <img src="https://images.unsplash.com/photo-1565019011521-b0575cbb57c8?w=1600&h=800"
+                    alt="Government Initiative 1">
                 <div class="slide-content">
                     <h2>Welcome to Delhi Government Portal</h2>
                     <p>Serving citizens with digital excellence</p>
                 </div>
             </div>
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=1600&h=800" alt="Government Initiative 2">
+                <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=1600&h=800"
+                    alt="Government Initiative 2">
                 <div class="slide-content">
                     <h2>Digital India Initiative</h2>
                     <p>Transforming India through technology</p>
                 </div>
             </div>
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1600&h=800" alt="Government Initiative 3">
+                <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1600&h=800"
+                    alt="Government Initiative 3">
                 <div class="slide-content">
                     <h2>Smart Governance</h2>
                     <p>Efficient and transparent services</p>
@@ -91,7 +102,7 @@
         <div class="slider-dots"></div>
     </section>
 
-    
+
     <!-- Info Section -->
     <section class="info">
         <div class="container">
@@ -120,204 +131,225 @@
         </div>
     </section>
 
-   <!-- Services Available -->
-  <div class="app">
-    <div class="services-container">
-      <div class="services-header">
-        <h1>SERVICES AVAILABLE ONLINE</h1>
-        <button id="autoScrollBtn" class="auto-scroll-btn">
-          Auto Scroll: OFF
-        </button>
-      </div>
-
-      <div class="search-container">
-        <div class="search-wrapper">
-          <input 
-            type="text" 
-            id="searchInput"
-            placeholder="Search here online service"
-            class="search-input"
-          >
-        </div>
-      </div>
-
-      <div id="servicesContainer" class="services-container">
-        <!-- Services will be dynamically inserted here -->
-      </div>
-    </div>
-</div>
-
-     <!-- Benefits Section -->
-     <div class="container-benefits">
-        <div class="header-benefits bg-transparent text-white">
-          <h2><b>Benefits</b></h2>
-          <h6>Digital Docket strives to be the one stop gateway to all the government certificates and services<br> through different
-            channels like Mobile Application, Chatbot and Website.
-          </h6>
-        </div>
+    <!-- Services Available -->
+    <div class="services-app">
+        <div class="services-main-container">
+          <div class="services-header">
+            <h1>SERVICES AVAILABLE ONLINE</h1>
+            <button id="autoScrollBtn" class="auto-scroll-btn">
+              Auto Scroll: OFF
+            </button>
+          </div>
     
-        <div class="inner-container">
-          <div class="row">
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card my-3" style="width: 100%; height: 10rem;">
-                            <div class="card-body">
-                                <i class="bi bi-stars"></i>
-                                <h5 class="card-title"><i class="fa-solid fa-shield-halved fa-fade"></i> Security</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">We utilize Blockchain Technology to ensure your data integrity 
-                                    and transparency.</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card my-3" style="width: 100%; height: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title"><i class="fa-solid fa-envelope fa-fade"></i> Email based notification</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Automated email sent to authorities in 7-days for pending applications.</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card my-3" style="width: 100%; height: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title"><i class="fa-solid fa-microphone fa-fade"></i> Voice Recognition </h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Hands-Free Operation, making devices accessible to people with disabilities.</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card my-3" style="width: 100%; height: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title"><i class="fa-solid fa-language fa-fade"></i> Multilingual Support</h5>
-                                <h6 class="card-subtitle mb-2 text-muted"> Access information and services on this website in your native language.</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card my-3" style="width: 100%; height: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title"><i class="fa-brands fa-whatsapp fa-fade"></i> App based notification</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Real-time alerts sent directly to the user's device through Whatsapp app.</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card my-3" style="width: 100%; height: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title"><i class="fa-solid fa-key fa-fade"></i> Time based OTP</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Added extra layer of security each 30-60 seconds to enhance security.</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <img src="images/benefits-img.png" alt="Benefits Image" class="benefits-image" style="width: 100%; height: auto;">
+          <div class="search-container">
+            <div class="search-wrapper">
+              <i data-lucide="search" class="search-icon"></i>
+              <input 
+                type="text" 
+                id="searchInput"
+                placeholder="Search here online service"
+                class="search-input"
+              >
             </div>
           </div>
     
+          <div id="servicesContainer" class="services-container">
+            <!-- Services will be dynamically inserted here -->
+          </div>
         </div>
     
-        <!-- Optional JavaScript -->
-     
+    <!-- Benefits Section -->
+    <div class="container-benefits">
+        <div class="header-benefits bg-transparent text-white">
+            <h2><b>Benefits</b></h2>
+            <h6 class="benefits-para">Digital Docket strives to be the one stop gateway to all the government certificates and services<br>
 
-    <!-- App Download Section -->
-        <section class="app-download">
-        <div class="qr-container">
-            <img src="images/mobile-pic.png" alt="Mobile App" class="mobile-image">
-            <p>Scan QR Code to Download the App</p>
+                through different
+                channels like Mobile Application, Chatbot and Website.
+            </h6>
         </div>
-        <div class="app-info">
-            <h2>Experience UMANG App on Android and iOS devices</h2>
-            <p>UMANG is a single unified app to access major e-government services anytime, anywhere on your mobile phone</p>
-            <div class="store-buttons">
-                <img src="images/play-store.png" alt="Google Play" style="width: 150px; height: auto;">
-                <!-- <img src="https://source.unsplash.com/random/150x50?ios" alt="App Store"> -->
-            </div>
-            <p>Follow Us:</p>
-            <div class="social-links">
-                <!-- <a href="#"><img src="images/facebook-icon.png" alt="Facebook" style="width: 30px; height: 30px;"></a> -->
-                <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" style="width: 30px; height: 30px;"></a>
-                <a href="#"><img src="images/instagram-icon.png" alt="Instagram" style="width: 60px; height: 30px;"></a>
-                <a href="#"><img src="images/youtube-icon.png" alt="YouTube" style="width: 30px; height: 30px;"></a>
-                <a href="#"><img src="images/twiter-icon.png" alt="Twitter" style="width: 50px; height: 30px;"></a>
-            </div>
-        </div>
-    </section>
 
-  
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Get to Know</h4>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cancellation/Refund Policy</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-                <h4>Grievance</h4>
-                <ul>
-                    <li><a href="#">CPGRAMS</a></li>
-                    <li><a href="#">National Consumer Helpline</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Schemes</a></li>
-                    <li><a href="#">Our Partners</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Video Guide</a></li>
-                    <li><a href="#">eBook</a></li>
-                    <li><a href="#">User Manual</a></li>
-                    <li><a href="#">Accessibility</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Integrated With</h4>
-                <div class="logos">
-                    <!-- <a href="https://www.digilocker.gov.in/" class="logo-link"> -->
-                        <div class="image-container">
-                            <img src="images/Digilocker_OG_Image-removebg-preview.png" alt="DigiLocker" class="digilocker-image">
+        <div class="inner-container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card my-3" style="width: 100%; height: 10rem;">
+                                <div class="card-body">
+                                    <i class="bi bi-stars"></i>
+                                    <h5 class="card-title"><i class="fa-solid fa-shield-halved fa-fade"></i> Security
+                                    </h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">We utilize Blockchain Technology to ensure
+                                        your data integrity
+                                        and transparency.</h6>
+                                </div>
+                            </div>
                         </div>
-                    </a>
-                    
+                        <div class="col-md-6">
+                            <div class="card my-3" style="width: 100%; height: 10rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fa-solid fa-envelope fa-fade"></i> Email based
+                                        notification</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Automated email sent to authorities in
+                                        7-days for pending applications.</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card my-3" style="width: 100%; height: 10rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fa-solid fa-microphone fa-fade"></i> Voice
+                                        Recognition </h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Hands-Free Operation, making devices
+                                        accessible to people with disabilities.</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card my-3" style="width: 100%; height: 10rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fa-solid fa-language fa-fade"></i> Multilingual
+                                        Support</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"> Access information and services on this
+                                        website in your native language.</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card my-3" style="width: 100%; height: 10rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fa-brands fa-whatsapp fa-fade"></i> App based
+                                        notification</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Real-time alerts sent directly to the
+                                        user's device through Whatsapp app.</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card my-3" style="width: 100%; height: 10rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fa-solid fa-key fa-fade"></i> Time based OTP</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Added extra layer of security each 30-60
+                                        seconds to enhance security.</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p>Visitors: <span>24,694,896</span></p>
+                <div class="col-md-4">
+                    <img src="images/benefits-img.png" alt="Benefits Image" class="benefits-image"
+                        style="width: 100%; height: auto;">
+                </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>This Portal is Digital India Project under the National E-Governance Division (NeGD), Ministry of Electronics & IT, Govt. of India. The content linked through UMANG is owned and maintained by the respective Ministries/Departments of Centre & State.</p>
-            <p>Last Updated On: 24 October, 2024 | v-12.145</p>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" onclick="scrollToTop()">▲</button>
-
-    <!-- Add Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    
+        </div>
 
-       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-       crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-       crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-       crossorigin="anonymous"></script>
- 
+        <!-- Optional JavaScript -->
 
-    <script src="js/app.js"></script>
-    <script src="js/scroll.js"></script>
+
+        <!-- App Download Section -->
+        <section class="app-download">
+            <div class="qr-container">
+                <img src="images/mobile-pic.png" alt="Mobile App" class="mobile-image">
+                <p>Scan QR Code to Download the App</p>
+            </div>
+            <div class="app-info">
+                <h2>Experience DIGITAL DOCKETS App on Android devices</h2>
+                <p>UMANG is a single unified app to access major e-government services anytime, anywhere on your mobile
+                    phone</p>
+                <div class="store-buttons">
+                    <img src="images/play-store.png" alt="Google Play" style="width: 150px; height: auto;">
+                    <!-- <img src="https://source.unsplash.com/random/150x50?ios" alt="App Store"> -->
+                </div>
+                <p>Follow Us:</p>
+                <div class="social-links">
+                    <!-- <a href="#"><img src="images/facebook-icon.png" alt="Facebook" style="width: 30px; height: 30px;"></a> -->
+                    <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn"
+                            style="width: 30px; height: 30px;"></a>
+                    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"
+                            style="width: 60px; height: 30px;"></a>
+                    <a href="#"><img src="images/youtube-icon.png" alt="YouTube" style="width: 30px; height: 30px;"></a>
+                    <a href="#"><img src="images/twiter-icon.png" alt="Twitter" style="width: 50px; height: 30px;"></a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Get to Know</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cancellation/Refund Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                    <h4>Grievance</h4>
+                    <ul>
+                        <li><a href="#">CPGRAMS</a></li>
+                        <li><a href="#">National Consumer Helpline</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Schemes</a></li>
+                        <li><a href="#">Our Partners</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Video Guide</a></li>
+                        <li><a href="#">eBook</a></li>
+                        <li><a href="#">User Manual</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Integrated With</h4>
+                    <div class="logos">
+                        <!-- <a href="https://www.digilocker.gov.in/" class="logo-link"> -->
+                        <div class="image-container">
+                            <img src="images/Digilocker_OG_Image-removebg-preview.png" alt="DigiLocker"
+                                class="digilocker-image">
+                        </div>
+                        </a>
+
+                    </div>
+                    <p>Visitors: <span>24,694,896</span></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>This Portal is Digital India Project under the National E-Governance Division (NeGD), Ministry of
+                    Electronics & IT, Govt. of India. The content linked through UMANG is owned and maintained by the
+                    respective Ministries/Departments of Centre & State.</p>
+                <p>Last Updated On: 24 October, 2024 | v-12.145</p>
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button -->
+        <button class="scroll-top" onclick="scrollToTop()">▲</button>
+
+        <!-- Add Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+
+        <script src="js/app.js"></script>
+        <script src="js/scroll.js"></script>
 </body>
+
 </html>

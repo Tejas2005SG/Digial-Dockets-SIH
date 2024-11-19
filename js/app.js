@@ -104,4 +104,44 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial call to display the first slide
     showSlide(currentSlide);
 
+    async function fetchServices() {
+        try {
+            const response = await fetch('https://api.example.com/services'); // Replace with your actual API URL
+            if (!response.ok) {
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+            const services = await response.json();
+            renderServices(services);
+        } catch (error) {
+            console.error('There has been a problem with your fetch operation:', error);
+            document.getElementById('servicesList').innerHTML = '<p>Failed to load services. Please try again later.</p>';
+        }
+    }
+
+    function renderServices(services) {
+        const servicesList = document.getElementById('servicesList');
+        if (services && services.length > 0) {
+            servicesList.innerHTML = services.map(service => `
+                <div class="service-card">
+                    <h3>${service.title}</h3>
+                    <p>${service.description}</p>
+                </div>
+            `).join('');
+        } else {
+            servicesList.innerHTML = '<p>No services available.</p>';
+        }
+    }
+
+    // Call the function to fetch services
+    fetchServices();
+
+    // Get elements
+    const menuIcon = document.getElementById('menuIcon');
+    const navLinks = document.getElementById('navLinks');
+
+    // Toggle nav links on menu icon click
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active'); // Toggle the active class
+    });
+
 });

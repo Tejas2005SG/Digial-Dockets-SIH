@@ -1,8 +1,5 @@
-/
-
-// // Initial render
-renderServices();/ // Initialize Lucide icons
-lucide.createIcons();
+// Initialize Lucide icons
+// lucide.createIcons();
 
 // Services data
 const SERVICES = {
@@ -132,99 +129,6 @@ function toggleAutoScroll() {
 // Event Listeners
 searchInput.addEventListener('input', (e) => renderServices(e.target.value));
 autoScrollBtn.addEventListener('click', toggleAutoScroll);
-// js/scroll.js
 
-// DOM Elements
-// const searchInput = document.getElementById('searchInput');
-// const servicesContainer = document.getElementById('servicesContainer');
-// const autoScrollBtn = document.getElementById('autoScrollBtn');
-
-// // Sample Services Data
-// const SERVICES = {
-//     'Revenue Department': [
-//         'Age Nationality Domicile',
-//         'Income Certificate',
-//         'Property Tax Payment',
-//         'Land Records',
-//     ],
-//     'Health Department': [
-//         'Vaccination Registration',
-//         'Health Checkup',
-//         'Health Insurance',
-//     ],
-//     'Education Department': [
-//         'Scholarship Application',
-//         'School Admission',
-//         'Examination Results',
-//     ],
-//     'Education Department': [
-//         'Scholarship Application',
-//         'School Admission',
-//         'Examination Results',
-//     ],
-//     'Education Department': [
-//         'Scholarship Application',
-//         'School Admission',
-//         'Examination Results',
-//     ],
-//     'Education Department': [
-//         'Scholarship Application',
-//         'School Admission',
-//         'Examination Results',
-//     ],
-// };
-
-// // Function to create service section
-// function createServiceSection(category, services) {
-//     const section = document.createElement('div');
-//     section.classList.add('service-category');
-//     const categoryHeader = document.createElement('h3');
-//     categoryHeader.textContent = category;
-//     section.appendChild(categoryHeader);
-
-//     services.forEach(service => {
-//         const serviceItem = document.createElement('div');
-//         serviceItem.textContent = service;
-//         section.appendChild(serviceItem);
-//     });
-
-//     return section;
-// }
-
-// // Render services based on search term
-// function renderServices(searchTerm = '') {
-//     servicesContainer.innerHTML = ''; // Clear existing services
-//     Object.entries(SERVICES).forEach(([category, services]) => {
-//         const filtered = services.filter(service =>
-//             service.toLowerCase().includes(searchTerm.toLowerCase())
-//         );
-//         if (filtered.length > 0) {
-//             const section = createServiceSection(category, filtered);
-//             servicesContainer.appendChild(section);
-//         }
-//     });
-// }
-
-// // Toggle auto-scroll functionality
-// let autoScrollInterval;
-// let isAutoScrolling = false;
-
-// function toggleAutoScroll() {
-//     if (isAutoScrolling) {
-//         clearInterval(autoScrollInterval);
-//         autoScrollBtn.textContent = 'Auto Scroll: OFF';
-//     } else {
-//         autoScrollInterval = setInterval(() => {
-//             servicesContainer.scrollBy(0, 1); // Scroll down by 1 pixel in servicesContainer
-//         }, 100); // Adjust speed as needed
-//         autoScrollBtn.textContent = 'Auto Scroll: ON';
-//     }
-//     isAutoScrolling = !isAutoScrolling;
-// }
-
-// // Event Listeners
-// searchInput.addEventListener('input', (e) => renderServices(e.target.value));
-// autoScrollBtn.addEventListener('click', toggleAutoScroll);
-
-// // Initial render
-// renderServices();
+// Initial render
+renderServices();
